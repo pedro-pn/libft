@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:56:20 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/13 04:47:18 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/13 18:55:54 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	**ft_split(const char *s, char c)
 	int		len_s;
 
 	splitted_s = alloc_s(s, c);
-	len_s = (int) ft_strlen((char *)s);
+	len_s = (int) ft_strlen(s);
 	s_split(s, c, len_s, splitted_s);
 	return (splitted_s);
 }

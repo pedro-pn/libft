@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 22:12:33 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/12 20:04:29 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/13 18:54:31 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	int		len_s;
 
 	counter = 0;
-	len_s = (int) ft_strlen((char *)s);
+	len_s = (int) ft_strlen(s);
 	while (counter <= len_s)
 	{
 		if (s[counter] == (unsigned char) c)
