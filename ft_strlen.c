@@ -6,13 +6,13 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:33:02 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/06 17:39:09 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/13 18:46:17 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	counter;
 
