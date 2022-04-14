@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ppaulo-d <ppaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/08 17:02:09 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/14 02:08:57 by ppaulo-d         ###   ########.fr       */
+/*   Created: 2022/04/14 00:27:43 by ppaulo-d          #+#    #+#             */
+/*   Updated: 2022/04/14 00:35:45 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	void	*ptr;
+	char	*s;
 
-	if (nmemb > INT_MAX / size)
-		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-		return (ptr);
-	ft_memset(ptr, 0, nmemb * size);
-	return (ptr);
+	s = ft_itoa(n);
+	ft_putstr_fd(s, fd);
+	free (s);
 }
