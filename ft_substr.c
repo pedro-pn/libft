@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 19:58:30 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/13 17:35:33 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/13 18:57:45 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	mem = 0;
-	s_len = ft_strlen((char *)s);
+	s_len = ft_strlen(s);
 	mem = s_len - start;
 	if (mem > (int) len)
 		mem = len;

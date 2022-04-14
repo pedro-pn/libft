@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ppaulo-d <ppaulo-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 22:12:33 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/13 18:54:31 by ppaulo-d         ###   ########.fr       */
+/*   Created: 2022/04/14 00:27:43 by ppaulo-d          #+#    #+#             */
+/*   Updated: 2022/04/14 00:35:45 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		counter;
-	int		len_s;
+	char	*s;
 
-	counter = 0;
-	len_s = (int) ft_strlen(s);
-	while (counter <= len_s)
-	{
-		if (s[counter] == (unsigned char) c)
-			return (&((char *)s)[counter]);
-		counter++;
-	}
-	return (NULL);
+	s = ft_itoa(n);
+	ft_putstr_fd(s, fd);
+	free (s);
 }
