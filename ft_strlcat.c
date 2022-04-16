@@ -6,13 +6,13 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:11:23 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/12 04:34:13 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/15 03:50:07 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-ssize_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int		counter;
 	size_t	length_dst;

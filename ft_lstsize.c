@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 03:49:42 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/14 19:52:33 by ppaulo-d         ###   ########.fr       */
+/*   Created: 2022/04/15 00:12:38 by ppaulo-d          #+#    #+#             */
+/*   Updated: 2022/04/15 00:25:37 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	if (c >= 65 && c <= 90)
-		return (1024);
-	else if (c >= 97 && c <= 122)
-		return (1024);
+	if (lst != NULL)
+		return (1 + ft_lstsize(lst -> next));
 	return (0);
 }
