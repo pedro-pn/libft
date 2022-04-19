@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 22:11:05 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/19 17:00:55 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/19 22:44:01 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = get_start(s1, set);
 	end = get_end(s1, set) - start + 1;
 	str = ft_substr(s1, start, end);
