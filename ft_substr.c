@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 19:58:30 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/13 18:57:45 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/19 22:39:19 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	mem = 0;
+	if (s == NULL)
+		return (NULL);
 	s_len = ft_strlen(s);
 	mem = s_len - start;
 	if (mem > (int) len)
@@ -30,6 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (sub);
 	}
 	sub = (char *) malloc((mem * sizeof(char)) + 1);
+	if (sub == NULL)
+		return (NULL);
 	if (start < s_len)
 		ft_strlcpy(sub, &s[start], mem + 1);
 	return (sub);
