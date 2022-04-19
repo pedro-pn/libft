@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 16:03:30 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/16 17:50:14 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/18 17:48:36 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	(*del)(lst->content);
-	free(lst);
+	if (lst && (*del))
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }

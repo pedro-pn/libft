@@ -6,12 +6,11 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:37:38 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/12 20:04:11 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/19 03:59:21 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
