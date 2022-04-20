@@ -22,10 +22,10 @@ NAME = libft.a
 
 OUTPUT = teste
 
+all: ${NAME}
+
 %.o:%.c
 	 @ ${CC} ${FLAGS} -c -o $@ $^
-
-all: ${NAME}
 
 bonus: ${BOBJS}
 		@ ar rc -o ${NAME} ${BOBJS}
