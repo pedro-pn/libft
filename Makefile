@@ -14,7 +14,7 @@ BOBJS = ${BFILES:.c=.o}
 
 OBJS = ${FILES:.c=.o}
 
-CC = gcc
+CC = cc
 
 FLAGS = -Werror -Wall -Wextra
 
@@ -35,7 +35,6 @@ ${NAME}:  ${OBJS}
 
 tt: ${NAME}
 	${CC} ${FLAGS} main_libft.c -o ${OUTPUT} -L. -lft -lbsd && ./${OUTPUT}
-
 
 clean: 
 		@ rm -f *.o
