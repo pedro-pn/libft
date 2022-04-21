@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 03:26:53 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/19 16:03:41 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/21 16:03:24 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ static char	*alloc(int n)
 	if (n <= 0)
 		counter++;
 	s = (char *) malloc((counter * sizeof(char)) + 1);
+	if (!s)
+		return (NULL);
 	return (s);
 }
 
@@ -80,6 +82,8 @@ char	*ft_itoa(int n)
 	int		n_alg;
 
 	itoa = alloc(n);
+	if (!itoa)
+		return (NULL);
 	if (n == 0)
 	{
 		itoa[0] = 48;

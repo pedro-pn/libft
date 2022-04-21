@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 18:39:23 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/19 22:48:11 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/21 16:01:31 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	s_len = ft_strlen(s);
 	map_str = (char *) malloc((s_len * sizeof(char)) + 1);
+	if (!map_str)
+		return (NULL);
 	index = 0;
 	while (index < s_len)
 	{

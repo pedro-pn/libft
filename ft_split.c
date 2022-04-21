@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:56:20 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/13 18:55:54 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/21 16:05:31 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static char	**alloc_s(const char *s, char c)
 	}
 	n_string++;
 	string = (char **) malloc(n_string * sizeof(char *));
+	if (!string)
+		return (NULL);
 	return (string);
 }
 
@@ -70,6 +72,8 @@ char	**ft_split(const char *s, char c)
 	int		len_s;
 
 	splitted_s = alloc_s(s, c);
+	if (!splitted_s)
+		return (NULL);
 	len_s = (int) ft_strlen(s);
 	s_split(s, c, len_s, splitted_s);
 	return (splitted_s);
