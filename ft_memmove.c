@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 04:57:31 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/19 03:58:40 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/21 15:57:00 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	counter;
 
+	if (!dest || !src)
+		return (NULL);
 	if (&((unsigned char *)src)[0] < &((unsigned char *)dest)[0])
 		counter = n - 1;
 	else
