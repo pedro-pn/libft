@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 17:02:09 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/14 02:08:57 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/23 17:21:45 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb > INT_MAX / size)
-		return (NULL);
+	if (size != 0)
+	{
+		if (nmemb > INT_MAX / size)
+			return (NULL);
+	}
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (ptr);
-	ft_memset(ptr, 0, nmemb * size);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
