@@ -6,7 +6,7 @@
 /*   By: ppaulo-d < ppaulo-d@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 21:08:56 by ppaulo-d          #+#    #+#             */
-/*   Updated: 2022/04/21 15:59:43 by ppaulo-d         ###   ########.fr       */
+/*   Updated: 2022/04/26 22:42:56 by ppaulo-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,28 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len_s1;
-	size_t	len_s2;
-	size_t	len_str;
+	size_t	len;
 	char	*str;
 
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
-	len_str = len_s1 + len_s2 + 1;
-	str = (char *)malloc(len_str * sizeof(char));
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1);
+	len += ft_strlen(s2);
+	str = (char *) malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1, len_s1 + 1);
-	ft_strlcat(str, s2, len_str);
-	return (str);
+	while (*s1 != 0)
+	{
+		*str = *s1;
+		str++;
+		s1++;
+	}
+	while (*s2 != 0)
+	{
+		*str = *s2;
+		str++;
+		s2++;
+	}
+	*str = 0;
+	return (str - len);
 }
