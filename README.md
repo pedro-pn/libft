@@ -46,7 +46,7 @@ This project is a C library with some reimplementation of some C standard librar
 > - [`ft_split`](https://github.com/pedro-pn/libft/blob/master/ft_split.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns an array of strings obtained by splitting a given string using the specified character as a delimiter.
 > - [`ft_itoa`](https://github.com/pedro-pn/libft/blob/master/ft_itoa.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a string representing the integer received as an argument.
 > - [`ft_strmapi`](https://github.com/pedro-pn/libft/blob/master/ft_strmapi.c) - Applies a given function to each character of a string, and passing its index as first argument to create a new string with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) resulting from successive applications of the given function.
-> - [`ft_striteri`](https://github.com/pedro-pn/libft/blob/master/ft_iteri.c) - Applies a given function on each character of the string passed as argument, passing its index as first argument.
+> - [`ft_striteri`](https://github.com/pedro-pn/libft/blob/master/ft_striteri.c) - Applies a given function on each character of the string passed as argument, passing its index as first argument.
 > - [`ft_putchar_fd`](https://github.com/pedro-pn/libft/blob/master/ft_putchar_fd.c) - Outputs a specified character to the given file descriptor.
 > - [`ft_putstr_fd`](https://github.com/pedro-pn/libft/blob/master/ft_putstr_fd.c) - Outputs a string to the given file descriptor.
 > - [`ft_putendl_fd`](https://github.com/pedro-pn/libft/blob/master/ft_putendl_fd.c) - Outputs a string to the given file descriptor followed by a newline.
@@ -64,22 +64,22 @@ typedef struct s_list
 ```
 The following functions are handy to deal with the t_list type.
 
-> - [`ft_lstnew`]() - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a new node of t_list.
-> - [`ft_lstadd_front`]() - Adds the node 'new' at the beginning of a t_list.
-> - [`ft_lstadd_back`]() - Adds the node 'new' at the end of a t_list.
-> - [`ft_lstsize`]() - Counts the number of nodes in a t_list.
-> - [`ft_lstlast`]() - Returns the last node of a t_list.
-> - [`ft_lstdelone`]() - Deletes a node of a t_list and it frees its content.
-> - [`ft_lstclear`]() - Deletes and frees the given node and every successor of that node.
-> - [`ft_lstiter`]() - Iterates a t_list and applies a given function on the content of each node.
-> - [`ft_lstmap`]() - Iterates a t_list and applies a given function on the content of each node. Creates a new t_list resulting of the successive applications of the given function.
+> - [`ft_lstnew`](https://github.com/pedro-pn/libft/blob/master/ft_lstnew.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a new node of t_list.
+> - [`ft_lstadd_front`](https://github.com/pedro-pn/libft/blob/master/ft_lstadd_front.c) - Adds the node 'new' at the beginning of a t_list.
+> - [`ft_lstadd_back`](https://github.com/pedro-pn/libft/blob/master/ft_lstadd_back.c) - Adds the node 'new' at the end of a t_list.
+> - [`ft_lstsize`](https://github.com/pedro-pn/libft/blob/master/ft_lstsize.c) - Counts the number of nodes in a t_list.
+> - [`ft_lstlast`](https://github.com/pedro-pn/libft/blob/master/ft_lstlast.c) - Returns the last node of a t_list.
+> - [`ft_lstdelone`](https://github.com/pedro-pn/libft/blob/master/ft_lstdelone.c) - Deletes a node of a t_list and it frees its content.
+> - [`ft_lstclear`](https://github.com/pedro-pn/libft/blob/master/ft_lstclear.c) - Deletes and frees the given node and every successor of that node.
+> - [`ft_lstiter`](https://github.com/pedro-pn/libft/blob/master/ft_lstiter.c) - Iterates a t_list and applies a given function on the content of each node.
+> - [`ft_lstmap`](https://github.com/pedro-pn/libft/blob/master/ft_lstmap.c) - Iterates a t_list and applies a given function on the content of each node. Creates a new t_list resulting of the successive applications of the given function.
 
 ### Extra functions
 
-> - [`ft_atoi_base`]() - Converts the first portion of a string into an integer. The portion to be converted of str may be in any given base, since base does not contain repeated characteres and the '+' '-' symbols.
-> - [`ft_utoa`]() - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a string representing the unsigned integer received as an argument.
-> - [`ft_memrpl`]() - Replaces every ocurrence of a given character with another in the first n bytes of a memory area.
-> - [`ft_strrpl`]() - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) a new string which is a copy of a given string with every occurence of a given character replaced with another.
+> - [`ft_atoi_base`](https://github.com/pedro-pn/libft/blob/master/ft_atoi_base.c) - Converts the first portion of a string into an integer. The portion to be converted of str may be in any given base, since base does not contain repeated characteres and the '+' '-' symbols.
+> - [`ft_utoa`](https://github.com/pedro-pn/libft/blob/master/ft_utoa.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a string representing the unsigned integer received as an argument.
+> - [`ft_memrpl`](https://github.com/pedro-pn/libft/blob/master/ft_memrpl.c) - Replaces every ocurrence of a given character with another in the first n bytes of a memory area.
+> - [`ft_strrpl`](https://github.com/pedro-pn/libft/blob/master/ft_strrpl.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) a new string which is a copy of a given string with every occurence of a given character replaced with another.
 
 ## Usage
 
