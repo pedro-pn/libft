@@ -11,39 +11,46 @@ BFILES =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstiter.c ft_lstmap.c
 
 BOBJS = ${BFILES:.c=.o}
-
 OBJS = ${FILES:.c=.o}
-
-CC = cc
-
+CC = gcc
 FLAGS = -Werror -Wall -Wextra
-
 NAME = libft.a
+BONUS = libft_bonus.a
 
-OUTPUT = teste
+# Colors
+L_CYAN = \33[1;36m
+L_BLUE = \33[1;34m
+L_GREEN = \33[1;92m
+L_PURPLE = \33[1;35m
+NC = \033[0m
 
 all: ${NAME}
 
 %.o:%.c
+	 @ echo "Compiling: $<"
 	 @ ${CC} ${FLAGS} -c -o $@ $^
 
-bonus: ${BOBJS}
-		@ ar rc -o ${NAME} ${BOBJS}
+bonus: ${BONUS}
 
-${NAME}:  ${OBJS}
+
+${NAME}: ${OBJS}
 		@ ar rc -o $@ $^
+		@ echo "${L_GREEN}Libft Successfully compiled!${NC}"
 
-tt: ${NAME}
-	${CC} ${FLAGS} main_libft.c -o ${OUTPUT} -L. -lft -lbsd && ./${OUTPUT}
+${BONUS}: ${BOBJS}
+		@ ar rc -o ${BONUS} ${BOBJS}
+		@ echo "${L_PURPLE}Libft_bonus Successfully compiled!${NC}"
 
 clean: 
-		@ rm -f *.o
+		@ rm -f ${OBJS} ${BOBJS}
+		@ echo "${L_CYAN}Objects deleted!${NC}"
 
 fclean: clean
-		@ rm -f ${NAME} && rm -f *.a
+		@ rm -f ${NAME} && rm -f ${NAME} ${BONUS}
+		@ echo "${L_BLUE}Libft deleted!${NC}"
 
 norma:
-		@ norminette -R CheckForbiddenSourceHeader ${FILES} libft.h ${BFILES}
+		@ norminette ${FILES} libft.h ${BFILES}
 
 re: fclean all
 
