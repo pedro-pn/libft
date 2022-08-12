@@ -38,7 +38,7 @@ This project is a C library with some reimplementation of some C standard librar
 > - [`ft_atoi`](https://github.com/pedro-pn/libft/blob/master/ft_atoi.c) - Converts the first portion of a given string into an integer.
 > - [`ft_calloc`](https://github.com/pedro-pn/libft/blob/master/ft_calloc.c) - Allocates an specified number of bytes in heap memory and set all allocated bytes to 0.
 
-### Addtional functions (bonus)
+### Addtional functions
 
 > - [`ft_substr`](https://github.com/pedro-pn/libft/blob/master/ft_substr.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a substring from a given string.
 > - [`ft_strjoin`](https://github.com/pedro-pn/libft/blob/master/ft_strjoin.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a new string, which is the result of the concatenation of two given strings.
@@ -52,16 +52,17 @@ This project is a C library with some reimplementation of some C standard librar
 > - [`ft_putendl_fd`](https://github.com/pedro-pn/libft/blob/master/ft_putendl_fd.c) - Outputs a string to the given file descriptor followed by a newline.
 > - [`ft_putnbr_fd`](https://github.com/pedro-pn/libft/blob/master/ft_putnbr_fd.c) - Outputs the an specified integer to the given file descriptor.
 
-### Linked list functions
+### Linked list functions (bonus)
 
 libft has its own linked list data structure which is define in the [`header`](https://github.com/pedro-pn/libft/blob/master/libft.h) file as follows:
 ```c
 typedef struct s_list
 {
-	void			*content;
+	void		*content;
 	struct s_list	*next;
-}				t_list;
+}		t_list;
 ```
+
 The following functions are handy to deal with the t_list type.
 
 > - [`ft_lstnew`](https://github.com/pedro-pn/libft/blob/master/ft_lstnew.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a new node of t_list.
@@ -116,3 +117,5 @@ Once compiled, the library `libft.a` or `libft_bonus.a` is generated in the repo
 To compile libft with your project, use the flag `-L. -lft`. The header file `libft.h` must be given to compiler with the flag `-I`. Example:
 
 	$> gcc myproject.c -I path/to/header/ -L. -lft
+
+To use with bonus functions use `-lft_bonus` insted of `-lft`.
