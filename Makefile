@@ -37,8 +37,8 @@ ${NAME}: ${OBJS}
 		@ ar rc -o $@ $^
 		@ echo "${L_GREEN}Libft Successfully compiled!${NC}"
 
-${BONUS}: ${BOBJS}
-		@ ar rc -o ${BONUS} ${BOBJS}
+${BONUS}: ${BOBJS} ${OBJS}
+		@ ar rc -o ${BONUS} ${BOBJS} ${OBJS}
 		@ echo "${L_PURPLE}Libft_bonus Successfully compiled!${NC}"
 
 clean: 
