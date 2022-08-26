@@ -81,6 +81,7 @@ The following functions are handy to deal with the t_list type.
 > - [`ft_utoa`](./ft_utoa.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) and returns a string representing the unsigned integer received as an argument.
 > - [`ft_memrpl`](./ft_memrpl.c) - Replaces every ocurrence of a given character with another in the first n bytes of a memory area.
 > - [`ft_strrpl`](./ft_strrpl.c) - Allocates with [malloc(3)](https://man7.org/linux/man-pages/man3/malloc.3.html) a new string which is a copy of a given string with every occurence of a given character replaced with another.
+> - [`ft_strcmp`](./ft_strcmp.c) - Compares two given strings.
 
 ## Usage
 
